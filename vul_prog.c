@@ -9,7 +9,10 @@ int main(int argc, char *argv[])
     char user_input[100];
     int *secret;  // Stack pointer 
     int int_input;
-    int a,b,c,d;
+    int a = 11111,
+        b = 22222,
+        c = 33333,
+        d = 44444;
 
     secret = (int *) malloc(2 * sizeof(int));  // Heap pointers
 
@@ -22,14 +25,13 @@ int main(int argc, char *argv[])
     printf("Var0 address is 0x%8x (on heap )\n",                   (unsigned int)&secret[0]);
     printf("Var1 address is 0x%8x (on heap )\n",                   (unsigned int)&secret[1]);
 
-
     printf("Please enter a decimal integer\n");
     scanf("%d", &int_input);
     printf("Please enter a string\n");
     scanf("%s", user_input);
 
     // Vurnerable place
-    printf(user_input, "junk");  // junk is to circumvent -Wformat-security
+    printf(user_input);  // insert "junk" as a second argument to circumvent -Wformat-security
     printf("\n");
 
     // The verdict
