@@ -4,16 +4,16 @@
 #define SECRET1 0x44
 #define SECRET2 0x55
 
+const char buff[] = "aaaa-%08x-%08x-%08x-%08x-%08x-%08x-%08x-%s";
+
 int main(int argc, char *argv[]) 
 {
     char user_input[100];
     int *secret;  // Stack pointer 
-    int int_input;
-    int a = 11111,
-        b = 22222,
-        c = 33333,
-        d = 44444;
+    // int int_input;
+    int a,b,c,d;
 
+    int throwAway = malloc(2 * sizeof(int));
     secret = (int *) malloc(2 * sizeof(int));  // Heap pointers
 
     secret[0] = SECRET1; 
@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
     printf("Var0 address is 0x%8x (on heap )\n",                   (unsigned int)&secret[0]);
     printf("Var1 address is 0x%8x (on heap )\n",                   (unsigned int)&secret[1]);
 
-    printf("Please enter a decimal integer\n");
-    scanf("%d", &int_input);
+    //printf("Please enter a decimal integer\n");
+    //scanf("%d", &int_input);
     printf("Please enter a string\n");
     scanf("%s", user_input);
 
