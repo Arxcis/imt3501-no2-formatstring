@@ -1,4 +1,9 @@
+# Report: Assignment 2 - Format string
 
+- Subject: IMT3501 - Software Security, NTNU Gjøvik
+- Name: Jonas J. Solsvik
+- Birth: 12.03.1991
+- Class: 16HBPROGA
 
 ## 2.1 Task1: Exploit the vurnerability
 
